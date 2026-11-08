@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Classroom Pro - plataforma educativa de demostración">
+  <title>Classroom Pro | Aprende, participa y avanza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="inicio">
+        <span class="brand-mark">✦</span><span>Classroom <b>Pro</b></span>
+      </a>
+      <div class="side-label">MENÚ PRINCIPAL</div>
+      <nav class="nav-menu" aria-label="Navegación principal">
+        <button class="nav-link active" data-page="inicio"><span>⌂</span> Inicio</button>
+        <button class="nav-link" data-page="clases"><span>▣</span> Mis clases</button>
+        <button class="nav-link" data-page="calendario"><span>▦</span> Calendario</button>
+        <button class="nav-link" data-page="tareas"><span>☑</span> Tareas <i class="nav-count">4</i></button>
+        <button class="nav-link" data-page="mensajes"><span>✉</span> Mensajes <i class="nav-count">2</i></button>
+        <button class="nav-link" data-page="progreso"><span>▥</span> Mi progreso</button>
+        <button class="nav-link" data-page="asistente"><span>✧</span> Asistente IA <em>NUEVO</em></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-icon">?</div>
+          <strong>¿Necesitas ayuda?</strong>
+          <p>Consulta nuestra guía para aprovechar la plataforma.</p>
+          <button class="text-button" data-page="ayuda">Ver guía →</button>
+        </div>
+        <button class="nav-link" data-page="configuracion"><span>⚙</span> Configuración</button>
+        <div class="user-mini">
+          <div class="avatar">RM</div>
+          <div><strong>Ronny Montás</strong><small>Estudiante</small></div>
+          <span class="more">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menú">☰</button>
+        <div class="breadcrumb">Espacio de aprendizaje <span>/</span> <b id="crumb">Inicio</b></div>
+        <label class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Buscar clases, tareas o recursos..."></label>
+        <button class="icon-button" id="notificationBtn" title="Notificaciones">♧<i></i></button>
+        <button class="profile-button"><span class="avatar small">RM</span><span>Ronny Montás</span><span>⌄</span></button>
+      </header>
+
+      <div class="content-wrap">
+        <section class="page active" id="page-inicio">
+          <div class="welcome-banner">
+            <div class="welcome-copy">
+              <span class="eyebrow light">LUNES, 9 DE NOVIEMBRE DE 2026</span>
+              <h1>¡Hola, Ronny! </h1>
+              <p>Tu espacio de aprendizaje está listo. ¡Vamos a lograr tus metas!</p>
+              <button class="button button-white" data-page="progreso">Ver mi progreso <span>→</span></button>
+            </div>
+            <div class="banner-art" aria-hidden="true"><div class="orb"></div><div class="cap">🎓</div><div class="book">📚</div></div>
+            <div class="banner-decoration"></div>
+          </div>
+
+          <div class="section-heading">
+            <div><span class="eyebrow">TU ESPACIO ACADÉMICO</span><h2>Resumen general</h2></div>
+            <span class="date-chip">📅 Noviembre 2026</span>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-icon purple">▣</div><div><span>Clases activas</span><strong>4</strong><small class="positive">+1 este período</small></div></article>
+            <article class="stat-card"><div class="stat-icon orange">☑</div><div><span>Tareas pendientes</span><strong id="pendingStat">4</strong><small>Revisa tus próximas entregas</small></div></article>
+            <article class="stat-card"><div class="stat-icon green">◉</div><div><span>Promedio general</span><strong>91<span class="small-percent">%</span></strong><small class="positive">¡Buen trabajo!</small></div></article>
+            <article class="stat-card"><div class="stat-icon blue">♧</div><div><span>Clases completadas</span><strong>18</strong><small>De 24 clases</small></div></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="panel classes-panel">
+              <div class="panel-heading"><div><h2>Mis clases</h2><p>Continúa donde lo dejaste</p></div><button class="text-button" data-page="clases">Ver todas →</button></div>
+              <div class="class-grid">
+                <article class="class-card" data-search="ingeniería software programación"><div class="class-cover cover-purple"><span>DESARROLLO</span><div>⌘</div></div><div class="class-info"><h3>Ingeniería en Software</h3><p>Prof. Juan Pérez</p><div class="class-foot"><span><i class="dot purple-dot"></i> 2 tareas pendientes</span><button class="round-arrow" data-open-class="software">→</button></div></div></article>
+                <article class="class-card" data-search="bases datos sql"><div class="class-cover cover-green"><span>BASES DE DATOS</span><div>▤</div></div><div class="class-info"><h3>Bases de Datos Aplicadas</h3><p>Ing. Jonathan Alonzo</p><div class="class-foot"><span><i class="dot green-dot"></i> 1 tarea pendiente</span><button class="round-arrow" data-open-class="datos">→</button></div></div></article>
+                <article class="class-card" data-search="arquitectura software"><div class="class-cover cover-orange"><span>DISEÑO</span><div>◇</div></div><div class="class-info"><h3>Arquitectura de Software</h3><p>Prof. María Gómez</p><div class="class-foot"><span><i class="dot orange-dot"></i> 1 tarea pendiente</span><button class="round-arrow" data-open-class="arquitectura">→</button></div></div></article>
+              </div>
+            </div>
+            <aside class="panel upcoming-panel">
+              <div class="panel-heading"><div><h2>Próximas entregas</h2><p>No dejes nada para después</p></div><button class="more-link" data-page="tareas">•••</button></div>
+              <div class="upcoming-list" id="upcomingList">
+                <div class="upcoming-item"><div class="task-date"><b>10</b><small>NOV</small></div><div class="upcoming-text"><strong>Ensayo sobre IA</strong><small>Ingeniería en Software</small></div><span class="priority high">Pronto</span></div>
+                <div class="upcoming-item"><div class="task-date"><b>12</b><small>NOV</small></div><div class="upcoming-text"><strong>Práctica de SQL</strong><small>Bases de Datos Aplicadas</small></div><span class="priority medium">En 3 días</span></div>
+                <div class="upcoming-item"><div class="task-date"><b>14</b><small>NOV</small></div><div class="upcoming-text"><strong>Diseño de arquitectura</strong><small>Arquitectura de Software</small></div><span class="priority medium">En 5 días</span></div>
+              </div>
+              <button class="button button-outline full-button" data-page="tareas">Ver todas las tareas</button>
+            </aside>
+          </div>
+          <div class="bottom-grid">
+            <div class="panel progress-mini"><div class="panel-heading"><div><h2>Tu progreso semanal</h2><p>Actividad de esta semana</p></div><span class="trend">↗ 12%</span></div><div class="mini-chart"><div class="chart-y"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div class="bars"><div><i style="height:48%"></i><small>Lun</small></div><div><i style="height:72%"></i><small>Mar</small></div><div><i style="height:58%"></i><small>Mié</small></div><div><i style="height:88%"></i><small>Jue</small></div><div><i style="height:65%"></i><small>Vie</small></div><div><i style="height:35%"></i><small>Sáb</small></div><div><i style="height:20%"></i><small>Dom</small></div></div></div></div>
+            <div class="panel announcement"><div class="announcement-icon">✦</div><div><span class="eyebrow">NOVEDAD DE CLASSROOM PRO</span><h3>Aprende con ayuda de IA</h3><p>¿Tienes dudas sobre un tema? Nuestro asistente puede ayudarte a estudiar.</p><button class="text-button" data-page="asistente">Probar asistente →</button></div></div>
+          </div>
+        </section>
+
+        <section class="page" id="page-clases">
+          <div class="page-title"><div><span class="eyebrow">ORGANIZA TU APRENDIZAJE</span><h1>Mis clases</h1><p>Accede a tus asignaturas, materiales y actividades.</p></div><button class="button button-primary" id="joinClassBtn">＋ Unirme a una clase</button></div>
+          <div class="filter-row"><button class="filter-chip selected">Todas las clases <b>4</b></button><button class="filter-chip">En curso</button><button class="filter-chip">Finalizadas</button></div>
+          <div class="class-grid large">
+            <article class="class-card"><div class="class-cover cover-purple"><span>DESARROLLO</span><div>⌘</div></div><div class="class-info"><h3>Ingeniería en Software</h3><p>Prof. Juan Pérez · SOFT-2201</p><div class="progress-line"><i style="width:72%"></i></div><div class="class-foot"><span>72% completado</span><button class="button button-small" data-open-class="software">Entrar a clase →</button></div></div></article>
+            <article class="class-card"><div class="class-cover cover-green"><span>BASES DE DATOS</span><div>▤</div></div><div class="class-info"><h3>Bases de Datos Aplicadas</h3><p>Ing. Jonathan Alonzo · SOFT-3221</p><div class="progress-line"><i style="width:64%"></i></div><div class="class-foot"><span>64% completado</span><button class="button button-small" data-open-class="datos">Entrar a clase →</button></div></div></article>
+            <article class="class-card"><div class="class-cover cover-orange"><span>DISEÑO</span><div>◇</div></div><div class="class-info"><h3>Arquitectura de Software</h3><p>Prof. María Gómez · SOFT-3102</p><div class="progress-line"><i style="width:81%"></i></div><div class="class-foot"><span>81% completado</span><button class="button button-small" data-open-class="arquitectura">Entrar a clase →</button></div></div></article>
+            <article class="class-card"><div class="class-cover cover-blue"><span>TECNOLOGÍA</span><div>⌁</div></div><div class="class-info"><h3>Ecosistema Frontend</h3><p>Prof. Carlos Díaz · SOFT-2104</p><div class="progress-line"><i style="width:55%"></i></div><div class="class-foot"><span>55% completado</span><button class="button button-small" data-open-class="frontend">Entrar a clase →</button></div></div></article>
+          </div>
+        </section>
+
+        <section class="page" id="page-tareas">
+          <div class="page-title"><div><span class="eyebrow">MANTENTE AL DÍA</span><h1>Mis tareas</h1><p>Administra tus actividades y fechas de entrega.</p></div><button class="button button-primary" id="newTaskBtn">＋ Nueva tarea de prueba</button></div>
+          <div class="task-summary"><div><span>Pendientes</span><strong id="taskPending">4</strong></div><div><span>Completadas</span><strong id="taskDone">3</strong></div><div><span>Vencidas</span><strong>0</strong></div></div>
+          <div class="panel table-panel"><div class="panel-heading"><div><h2>Lista de actividades</h2><p>Marca una tarea cuando la hayas terminado.</p></div><select id="taskFilter" class="select-control"><option value="all">Todas</option><option value="pending">Pendientes</option><option value="done">Completadas</option></select></div><div id="taskList" class="task-list"></div></div>
+        </section>
+
+        <section class="page" id="page-calendario">
+          <div class="page-title"><div><span class="eyebrow">PLANIFICA TU TIEMPO</span><h1>Calendario</h1><p>Consulta tus próximas clases, tareas y actividades.</p></div><button class="button button-primary" id="addEventBtn">＋ Agregar evento</button></div>
+          <div class="calendar-layout"><div class="panel calendar-panel"><div class="calendar-head"><button id="prevMonth">‹</button><h2 id="monthLabel">Noviembre 2026</h2><button id="nextMonth">›</button></div><div class="calendar-grid" id="calendarGrid"></div></div><div class="panel day-panel"><span class="eyebrow">AGENDA</span><h2>Próximas actividades</h2><div class="agenda-item"><span class="agenda-dot purple-dot"></span><div><strong>Ensayo sobre inteligencia artificial</strong><small>10 nov · 11:59 p. m.</small></div></div><div class="agenda-item"><span class="agenda-dot green-dot"></span><div><strong>Práctica de SQL</strong><small>12 nov · 10:00 p. m.</small></div></div><div class="agenda-item"><span class="agenda-dot orange-dot"></span><div><strong>Diseño de arquitectura</strong><small>14 nov · 11:59 p. m.</small></div></div><div class="agenda-tip">💡 <span>Organiza tus entregas con tiempo para evitar acumulaciones.</span></div></div></div>
+        </section>
+
+        <section class="page" id="page-mensajes">
+          <div class="page-title"><div><span class="eyebrow">COMUNICACIÓN</span><h1>Mensajes</h1><p>Un espacio para comunicarte con tus profesores.</p></div><button class="button button-primary" id="newMessageBtn">＋ Nuevo mensaje</button></div>
+          <div class="panel message-panel"><div class="message-list"><button class="message-person active"><span class="avatar purple-avatar">JP</span><span><b>Juan Pérez</b><small>Recuerda revisar la guía del proyecto...</small></span><time>9:15 AM</time></button><button class="message-person"><span class="avatar green-avatar">JA</span><span><b>Jonathan Alonzo</b><small>La práctica de SQL ya está disponible.</small></span><time>Ayer</time></button><button class="message-person"><span class="avatar orange-avatar">MG</span><span><b>María Gómez</b><small>Excelente participación en clase.</small></span><time>Vie</time></button></div><div class="conversation"><div class="conversation-head"><span class="avatar purple-avatar">JP</span><div><b>Juan Pérez</b><small>Profesor · Ingeniería en Software</small></div><span class="online-dot">● En línea</span></div><div class="chat-content"><div class="chat-date">HOY</div><div class="bubble received">¡Hola, Ronny! ¿Cómo vas con el proyecto final?</div><div class="bubble sent">¡Hola, profesor! Estoy avanzando con la estructura y el diseño.</div><div class="bubble received">Excelente. Recuerda revisar los requisitos antes de entregar.</div></div><form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Escribe un mensaje..." required><button class="button button-primary">Enviar ↑</button></form></div></div>
+        </section>
+
+        <section class="page" id="page-progreso">
+          <div class="page-title"><div><span class="eyebrow">TUS LOGROS</span><h1>Mi progreso</h1><p>Observa tu rendimiento y sigue mejorando.</p></div><span class="date-chip">Período actual · 2026</span></div>
+          <div class="stats-grid"><article class="stat-card"><div class="stat-icon purple">★</div><div><span>Promedio general</span><strong>91%</strong><small class="positive">Excelente rendimiento</small></div></article><article class="stat-card"><div class="stat-icon green">✓</div><div><span>Tareas completadas</span><strong id="progressDone">3</strong><small>De 7 actividades</small></div></article><article class="stat-card"><div class="stat-icon blue">◷</div><div><span>Horas de estudio</span><strong>28</strong><small>Este mes</small></div></article><article class="stat-card"><div class="stat-icon orange">♧</div><div><span>Asistencia</span><strong>96%</strong><small class="positive">¡Sigue así!</small></div></article></div>
+          <div class="panel performance-panel"><div class="panel-heading"><div><h2>Rendimiento por asignatura</h2><p>Resultados de ejemplo para visualizar tu avance.</p></div></div><div class="subject-progress"><div><span>Ingeniería en Software</span><b>94%</b></div><div class="progress-line"><i style="width:94%"></i></div></div><div class="subject-progress"><div><span>Bases de Datos Aplicadas</span><b>89%</b></div><div class="progress-line green-line"><i style="width:89%"></i></div></div><div class="subject-progress"><div><span>Arquitectura de Software</span><b>92%</b></div><div class="progress-line orange-line"><i style="width:92%"></i></div></div><div class="subject-progress"><div><span>Ecosistema Frontend</span><b>88%</b></div><div class="progress-line blue-line"><i style="width:88%"></i></div></div></div>
+        </section>
+
+        <section class="page" id="page-asistente">
+          <div class="page-title"><div><span class="eyebrow">TU COMPAÑERO DE ESTUDIO</span><h1>Asistente IA ✦</h1><p>Haz preguntas, repasa conceptos y organiza tus ideas.</p></div><span class="ai-status">● Asistente de demostración</span></div>
+          <div class="ai-layout"><div class="panel ai-intro"><div class="ai-orb">✦</div><h2>¡Hola, Ronny!</h2><p>Soy tu asistente educativo de Classroom Pro. Puedo ayudarte a estudiar y comprender mejor tus asignaturas.</p><div class="suggestion-list"><button class="suggestion">Explícame qué es una base de datos</button><button class="suggestion">Dame consejos para organizar mis tareas</button><button class="suggestion">Resume qué es la arquitectura de software</button></div><small>Esta versión utiliza respuestas de demostración, no una conexión real a un servicio de IA.</small></div><div class="panel ai-chat"><div class="ai-chat-head"><span class="ai-orb small-orb">✦</span><div><b>Asistente Classroom</b><small>Disponible para ayudarte</small></div><button id="clearChat" class="more-link">Limpiar</button></div><div id="aiMessages" class="ai-messages"><div class="ai-message">¡Hola! 👋 ¿Qué tema te gustaría estudiar hoy?</div></div><form id="aiForm" class="ai-input"><input id="aiInput" placeholder="Escribe tu pregunta..." required><button class="button button-primary">Enviar ↑</button></form></div></div>
+        </section>
+
+        <section class="page" id="page-configuracion">
+          <div class="page-title"><div><span class="eyebrow">PERSONALIZA TU ESPACIO</span><h1>Configuración</h1><p>Administra las preferencias de tu experiencia.</p></div></div>
+          <div class="panel settings-panel"><h2>Perfil de usuario</h2><div class="setting-row"><div class="avatar">RM</div><div><b>Ronny Montás</b><small>ronny.estudiante@ejemplo.com · Estudiante</small></div><button class="button button-outline" id="editProfile">Editar perfil</button></div><hr><h2>Preferencias</h2><div class="setting-row"><div><b>Notificaciones</b><small>Recibe avisos sobre tareas y mensajes.</small></div><label class="switch"><input type="checkbox" checked><span></span></label></div><div class="setting-row"><div><b>Modo oscuro</b><small>Activa una apariencia oscura.</small></div><label class="switch"><input type="checkbox" id="darkToggle"><span></span></label></div><div class="setting-row"><div><b>Recordatorios de tareas</b><small>Recibe avisos antes de las fechas de entrega.</small></div><label class="switch"><input type="checkbox" checked><span></span></label></div></div>
+        </section>
+
+        <section class="page" id="page-ayuda">
+          <div class="page-title"><div><span class="eyebrow">CENTRO DE AYUDA</span><h1>¿Cómo usar Classroom Pro?</h1><p>Una guía rápida para explorar el prototipo.</p></div></div>
+          <div class="panel help-content"><h2>Bienvenido al prototipo</h2><p>Classroom Pro es una propuesta académica de rediseño de una plataforma educativa. Puedes navegar por el menú lateral y probar las funciones disponibles.</p><div class="help-step"><b>01 · Explora tus clases</b><p>Entra en “Mis clases” y selecciona una asignatura.</p></div><div class="help-step"><b>02 · Administra tus tareas</b><p>En “Tareas” puedes marcar actividades como completadas y agregar tareas de demostración.</p></div><div class="help-step"><b>03 · Organiza tu calendario</b><p>Consulta las fechas y agrega eventos de ejemplo.</p></div><div class="help-step"><b>04 · Prueba el asistente</b><p>Escribe una pregunta o selecciona una sugerencia para recibir una respuesta simulada.</p></div><div class="notice">ℹ️ Los nombres, calificaciones, mensajes y actividades son datos ficticios creados para mostrar el funcionamiento del diseño.</div></div>
+        </section>
+      </div>
+      <footer class="footer"><span>© 2026 Classroom Pro · Prototipo educativo</span><span>Diseñado para aprender mejor <b>✦</b></span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose">×</button><div class="modal-icon">✦</div><h2 id="modalTitle">Classroom Pro</h2><div id="modalBody"></div><div class="modal-actions"><button class="button button-outline" id="modalCancel">Cancelar</button><button class="button button-primary" id="modalConfirm">Aceptar</button></div></div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
